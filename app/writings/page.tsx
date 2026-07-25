@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { WritingList } from "@/components/writing-list";
-import { writings } from "@/lib/content";
+import { getWritings } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Writings",
@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 };
 
 export default function WritingsPage() {
+  const writings = getWritings();
+
   return (
     <main className="writings-shell">
       <nav className="crumbs" aria-label="Breadcrumb">

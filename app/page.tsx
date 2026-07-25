@@ -6,7 +6,7 @@ import {
   getGithubActivity,
   getHackatimeHeatmap,
 } from "@/lib/activity";
-import { writings } from "@/lib/content";
+import { getWritings } from "@/lib/content";
 
 export const dynamic = "force-dynamic";
 
@@ -30,6 +30,7 @@ const socialLinks = [
 ];
 
 export default async function Home() {
+  const writings = getWritings();
   const [githubActivity, hackatimeActivity] = await Promise.all([
     getGithubActivity("ksgat"),
     getHackatimeHeatmap("ksgat"),

@@ -21,7 +21,7 @@ export function WritingList({
         >
           <Link
             className="writing-list__link"
-            href={`/writings#${writing.slug}`}
+            href={`/writings/${writing.slug}`}
           >
             <span className="writing-list__title">{writing.title}</span>
             <span className="writing-list__subtitle">{writing.subtitle}</span>
