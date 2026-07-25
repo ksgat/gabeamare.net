@@ -119,6 +119,7 @@ function HackatimeGraph({
     (sum, day) => sum + day.seconds,
     0,
   );
+  const maxSeconds = Math.max(0, ...visibleDays.map((day) => day.seconds));
 
   return (
     <section className="activity-card activity-card--hackatime">
@@ -147,10 +148,12 @@ function HackatimeGraph({
           >
             {visibleDays.map((day) => (
               <span
-                className="activity-cell"
+                className={`activity-cell activity-cell--${getActivityLevel(
+                  day.seconds,
+                  maxSeconds,
+                )}`}
                 key={`${day.week}-${day.weekday}-${day.label}`}
                 style={{
-                  backgroundColor: day.color,
                   gridColumn: day.week,
                   gridRow: day.weekday,
                 }}
@@ -191,4 +194,15 @@ function formatHours(seconds: number) {
   const value = hours >= 10 ? Math.round(hours).toString() : hours.toFixed(1);
 
   return `${value} hours`;
+}
+
+function getActivityLevel(seconds: number, maxSeconds: number) {
+  if (seconds <= 0 || maxSeconds <= 0) return 0;
+
+  const intensity = seconds / maxSeconds;
+
+  if (intensity <= 0.15) return 1;
+  if (intensity <= 0.35) return 2;
+  if (intensity <= 0.65) return 3;
+  return 4;
 }
