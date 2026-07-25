@@ -1,19 +1,39 @@
-# gabeamare.net
+# gabeamare(dot)net
 
-A minimal personal site built in Next.js from the supplied Figma design.
+this is my personal site.
 
-## Run locally
+it is a site, with stuff on it, im going to write a few blogs like soon as in next week or so, so pretty lit
+
+![a quick scroll through gabeamare(dot)net](.github/assets/site-demo.gif)
+
+<details>
+  <summary>the still frames</summary>
+  <br />
+  <img src=".github/assets/home.png" alt="The gabeamare(dot)net home page" />
+  <br /><br />
+  <img src=".github/assets/writing.png" alt="A Markdown writing on gabeamare(dot)net" />
+</details>
+
+## details
+
+- the design was done in Figma, I found this font, Redaction, on Instagram Reels, and it was cool, so I used it.
+- GitHub and Hackatime contribution graphs are live, grayscale, and clickable from one year down to one week
+- writings are just Markdown files in [`content/writings`](content/writings)
+- drafts are real drafts: written and hidden, codex made a fun little 404 without asking me, I lowk rock with it so yeh.
+- Design is me, all me. implmentation was all codex.
+
+## run it
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+then pull up [localhost:3000](http://localhost:3000).
 
-## Add a writing
+## write something
 
-Create a Markdown file in `content/writings`:
+drop a `.md` file into `content/writings`:
 
 ```md
 ---
@@ -26,10 +46,20 @@ draft: true
 Write the post here.
 ```
 
-The filename becomes the URL. For example, `my-post.md` is served at
-`/writings/my-post`. Drafts are excluded from every public writing list and
-return a 404 at their direct URL. Change `draft` to `false` to publish.
+the filename becomes the URL, so `my-post.md` lives at `/writings/my-post`.
+flip `draft` to `false` whenever it deserves to see daylight.
 
-Typography is automatic: prose uses Inter, headings use Redaction 10, and links
-use Redaction 35. Start sections inside a post with `##`; the page title comes
-from frontmatter.
+typography is automatic: prose gets Inter, headings get Redaction 10, and links
+get Redaction 35. start sections with `##`; the page title comes from the
+frontmatter.
+
+## built with
+
+[Next.js](https://nextjs.org/) · [React](https://react.dev/) ·
+[TypeScript](https://www.typescriptlang.org/) · Markdown · unhealthy curiosity
+
+made by [gabe](https://github.com/ksgat).
+
+# credit where its due
+
+I am using Shymikes hackatime for data, and then rendering myself so yeah check his stuff out hes tuff: shymike.dev, github.com/Imshymike.
