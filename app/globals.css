@@ -20,6 +20,31 @@
 }
 
 @font-face {
+  font-family: "PP Neue Montreal";
+  src: local("PP Neue Montreal Regular"), local("PPNeueMontreal-Regular"),
+    local("PP Neue Montreal");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: local("PP Neue Montreal Semibold"), local("PPNeueMontreal-Semibold");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: local("PP Neue Montreal Extrabold"), local("PPNeueMontreal-Extrabold");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Redaction 35";
   src: url("/fonts/Redaction35-Regular.otf") format("opentype");
   font-style: normal;
@@ -76,149 +101,11 @@ a:focus-visible {
   color: var(--paper);
 }
 
-.home-shell {
-  display: grid;
-  grid-template-columns: minmax(16.5rem, 0.506fr) minmax(28rem, 1fr);
-  grid-template-rows: 20.2rem auto;
-  gap: 1.55rem 2rem;
-  width: min(100%, 58rem);
-  min-height: 41.5rem;
-  margin: 0 auto;
-  padding: 2.45rem 4.45rem 2rem 2.45rem;
-}
-
-.intro {
-  align-self: start;
-  width: 16.5rem;
-  max-width: 100%;
-}
-
-.eyebrow,
-.bio-copy {
+.eyebrow {
+  margin: 0 0 1.08em;
   font-size: 1.25rem;
   line-height: 0.95;
   letter-spacing: 0.018em;
-}
-
-.eyebrow {
-  margin: 0 0 1.08em;
-}
-
-.bio-copy {
-  text-wrap: pretty;
-}
-
-.bio-copy p {
-  margin: 0 0 1.03em;
-}
-
-.bio-copy p:last-child {
-  margin-bottom: 0;
-}
-
-.inline-link {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.12em;
-}
-
-.identity {
-  align-self: start;
-  min-width: 0;
-}
-
-.wordmark-wrap {
-  position: relative;
-  width: 100%;
-}
-
-.dot-net {
-  position: absolute;
-  z-index: 1;
-  top: 0.55em;
-  right: -0.9rem;
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: 1.8rem;
-  font-style: italic;
-  line-height: 1;
-  white-space: nowrap;
-  transform: rotate(-2deg);
-}
-
-.wordmark {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(10rem, 21.8vw, 12.65rem);
-  font-weight: 400;
-  letter-spacing: -0.082em;
-  line-height: 0.55;
-}
-
-.wordmark span:last-child {
-  margin-left: -0.08em;
-}
-
-.socials {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0 0.22em;
-  width: calc(100% + 0.8rem);
-  margin-top: 1.52rem;
-  font-family: var(--font-accent);
-  font-size: 1.9rem;
-  line-height: 1;
-  letter-spacing: -0.035em;
-  text-transform: lowercase;
-}
-
-.socials a {
-  position: relative;
-}
-
-.socials a:not(:last-child)::after {
-  content: " ";
-}
-
-.socials a::before,
-.more-link::before,
-.crumbs a::before,
-.writing-list__title::after {
-  position: absolute;
-  right: 0;
-  bottom: -0.05em;
-  left: 0;
-  height: 1px;
-  content: "";
-  background: currentColor;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 220ms ease;
-}
-
-.socials a:hover::before,
-.more-link:hover::before,
-.crumbs a:hover::before,
-.writing-list__link:hover .writing-list__title::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-.writing-preview {
-  align-self: start;
-}
-
-.section-heading-row h2,
-.writings-index h1 {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: -0.035em;
-  line-height: 1;
 }
 
 .writing-list {
@@ -248,6 +135,26 @@ a:focus-visible {
   letter-spacing: -0.025em;
 }
 
+.crumbs a::before,
+.writing-list__title::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.05em;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 220ms ease;
+}
+
+.crumbs a:hover::before,
+.writing-list__link:hover .writing-list__title::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 .writing-list__subtitle {
   margin-top: 0.25em;
   font-family: var(--font-display);
@@ -255,134 +162,6 @@ a:focus-visible {
   font-style: italic;
   line-height: 1.15;
   letter-spacing: -0.01em;
-}
-
-.writing-list--compact {
-  gap: 0.7rem;
-  margin-top: 0.82rem;
-}
-
-.writing-list--compact .writing-list__title {
-  font-size: 1.34rem;
-}
-
-.writing-list--compact .writing-list__subtitle {
-  font-size: 0.8rem;
-}
-
-.more-link {
-  position: relative;
-  display: inline-block;
-  margin-top: 0.55rem;
-  font-family: var(--font-accent);
-  font-size: 1.35rem;
-  letter-spacing: 0.015em;
-}
-
-.utility-links {
-  display: grid;
-  align-self: start;
-  gap: 1.75rem;
-}
-
-.activity-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 6.55rem;
-  padding: 0.62rem 0.78rem;
-  overflow: hidden;
-  background: var(--quiet);
-  font-family: var(--font-accent);
-  font-size: 0.78rem;
-  letter-spacing: 0.015em;
-  transition: background-color 160ms ease;
-}
-
-.activity-card:hover {
-  background: #d5d5d5;
-}
-
-.activity-card__topline {
-  display: flex;
-  flex: none;
-  align-items: baseline;
-  justify-content: space-between;
-  min-width: 0;
-  margin-bottom: 0.45rem;
-  line-height: 1;
-}
-
-.activity-card__topline > a:first-child {
-  font-size: 1rem;
-}
-
-.activity-period {
-  padding: 0;
-  border: 0;
-  color: inherit;
-  background: transparent;
-  font: inherit;
-  font-family: var(--font-accent);
-  letter-spacing: inherit;
-  opacity: 0.62;
-  cursor: pointer;
-}
-
-.activity-period:hover,
-.activity-period:focus-visible {
-  opacity: 1;
-}
-
-.activity-period:focus-visible {
-  outline: 1px solid currentColor;
-  outline-offset: 3px;
-}
-
-.activity-card__graph-link {
-  display: flex;
-  flex: 1;
-  min-height: 0;
-}
-
-.activity-heatmap {
-  display: grid;
-  flex: 1;
-  width: 100%;
-  grid-template-columns: repeat(var(--week-count), minmax(0, 1fr));
-  grid-template-rows: repeat(7, minmax(0, 1fr));
-  gap: 2px;
-  min-height: 0;
-}
-
-.activity-cell {
-  display: block;
-  min-width: 0;
-  min-height: 0;
-  background: rgb(14 14 13 / 7%);
-}
-
-.activity-cell--1 {
-  background: rgb(14 14 13 / 25%);
-}
-
-.activity-cell--2 {
-  background: rgb(14 14 13 / 45%);
-}
-
-.activity-cell--3 {
-  background: rgb(14 14 13 / 68%);
-}
-
-.activity-cell--4 {
-  background: rgb(14 14 13 / 92%);
-}
-
-.activity-card__fallback {
-  display: grid;
-  flex: 1;
-  place-items: center;
-  font-size: 1.2rem;
 }
 
 .writings-shell {
@@ -414,7 +193,12 @@ a:focus-visible {
 }
 
 .writings-index h1 {
+  margin: 0;
+  font-family: var(--font-display);
   font-size: clamp(2.05rem, 3.3vw, 4.2rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1;
 }
 
 .writings-index .writing-list {
@@ -571,75 +355,6 @@ a:focus-visible {
 }
 
 @media (max-width: 760px) {
-  .home-shell {
-    display: flex;
-    flex-direction: column;
-    gap: 3.75rem;
-    min-height: auto;
-    padding: 1.1rem 1rem 2rem;
-  }
-
-  .identity {
-    order: -1;
-    padding-top: 1.25rem;
-  }
-
-  .wordmark {
-    width: 100%;
-    font-size: clamp(5.7rem, 29vw, 9rem);
-    line-height: 0.59;
-  }
-
-  .dot-net {
-    top: -0.35rem;
-    right: 0.25rem;
-    font-size: 1rem;
-  }
-
-  .socials {
-    justify-content: flex-start;
-    margin-top: 1.9rem;
-    font-size: clamp(1.06rem, 5.1vw, 1.5rem);
-  }
-
-  .intro {
-    max-width: 25rem;
-  }
-
-  .eyebrow,
-  .bio-copy {
-    font-size: clamp(1rem, 4.2vw, 1.2rem);
-    line-height: 1.11;
-  }
-
-  .writing-preview {
-    width: 100%;
-  }
-
-  .section-heading-row h2 {
-    font-size: 2rem;
-  }
-
-  .writing-list--compact {
-    gap: 1rem;
-  }
-
-  .writing-list--compact .writing-list__title {
-    font-size: 1.26rem;
-  }
-
-  .writing-list--compact .writing-list__subtitle {
-    font-size: 0.73rem;
-  }
-
-  .utility-links {
-    width: 100%;
-  }
-
-  .activity-card {
-    min-height: 6rem;
-  }
-
   .writings-shell {
     padding: 1rem;
   }
