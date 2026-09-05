@@ -47,7 +47,7 @@
   height: 100%;
   margin: 0;
   font-family: var(--font-neue);
-  font-size: clamp(5.5rem, min(22vw, 36vh), 19rem);
+  font-size: clamp(4rem, min(26cqw, 60cqh), 19rem);
   font-weight: 800;
   letter-spacing: 0.01em;
   line-height: 0.78;
@@ -76,7 +76,7 @@
   align-self: flex-end;
   margin: 0 0 0.45em auto;
   font-family: var(--font-neue);
-  font-size: clamp(0.7rem, 1.2vw, 1.2rem);
+  font-size: clamp(0.7rem, 2cqw, 1.2rem);
   font-weight: 600;
   letter-spacing: 0.025em;
   line-height: 1;
@@ -204,7 +204,7 @@
   }
 
   .name {
-    font-size: clamp(5.5rem, min(29vw, 30vh), 9rem);
+    font-size: clamp(4rem, min(26cqw, 60cqh), 12rem);
     line-height: 0.8;
   }
 
