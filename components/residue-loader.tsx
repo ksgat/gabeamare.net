@@ -84,16 +84,16 @@ export function ResidueLoader({
       role={demo ? undefined : "status"}
       onClick={() => !demo && setFinished(true)}
     >
-      <header className={styles.header}>
-        <span>
-          {minimal
-            ? "gabeamare.net"
-            : variant === "congruence"
+      {!minimal && (
+        <header className={styles.header}>
+          <span>
+            {variant === "congruence"
               ? "Quadratic congruence"
               : "Legendre field"}
-        </span>
-        <span>{minimal ? "Loading" : `p = ${prime}`}</span>
-      </header>
+          </span>
+          <span>p = {prime}</span>
+        </header>
+      )}
 
       <ResidueField variant={variant} prime={prime} phase={phase} />
 
