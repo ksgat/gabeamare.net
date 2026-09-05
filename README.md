@@ -29,6 +29,3 @@ npm run dev
 ```
 
 then pull up [localhost:3000](http://localhost:3000).
-# credit where its due
-
-I am using Shymikes hackatime for data, and then rendering myself so yeah check his stuff out hes tuff: shymike.dev, github.com/Imshymike.
