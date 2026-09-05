@@ -50,7 +50,8 @@
   font-size: clamp(4rem, min(29cqw, 66cqh), 20rem);
   font-weight: 800;
   letter-spacing: 0.01em;
-  line-height: 0.7;
+  line-height: 0.65;
+  transform: translateY(0.02em);
 }
 
 .nameLine {
@@ -63,6 +64,16 @@
 .nameWord {
   display: block;
   white-space: nowrap;
+  transform: scaleY(1.18);
+  transform-origin: left center;
+}
+
+.nameLine:first-child {
+  padding-left: clamp(0.5rem, 2cqw, 1.5rem);
+}
+
+.nameLine:first-child .nameWord {
+  transform: scale(1.18);
 }
 
 .domainLine {
@@ -205,7 +216,7 @@
 
   .name {
     font-size: clamp(4rem, min(27cqw, 66cqh), 12rem);
-    line-height: 0.72;
+    line-height: 0.68;
   }
 
   .about {
