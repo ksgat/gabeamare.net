@@ -4,7 +4,7 @@ this is my personal site.
 
 it is a site, with stuff on it, im going to write a few blogs like soon as in next week or so, so pretty lit
 
-![a quick scroll through gabeamare(dot)net](.github/assets/site-demo.gif)
+![gabeamare(dot)net loading into the home page](.github/assets/site-demo.gif)
 
 <details>
   <summary>the still frames</summary>
@@ -16,11 +16,12 @@ it is a site, with stuff on it, im going to write a few blogs like soon as in ne
 
 ## details
 
-- the design was done in Figma, I found this font, Redaction, on Instagram Reels, and it was cool, so I used it.
-- GitHub and Hackatime contribution graphs are live, grayscale, and clickable from one year down to one week
+- the landing page is an electric-blue panel grid set in PP Neue Montreal. the writings still use Redaction and Inter.
+- GitHub and Hackatime activity is live, rendered as binary WebGL grids, and clickable from one year down to one week
+- the loading field is drawn from quadratic residues on canvas; `/loaders` has the two live studies
 - writings are just Markdown files in [`content/writings`](content/writings)
 - drafts are real drafts: written and hidden, codex made a fun little 404 without asking me, I lowk rock with it so yeh.
-- Design is me, all me. implmentation was all codex.
+- Design is me, all me. implementation was all codex.
 
 ## run it
 
