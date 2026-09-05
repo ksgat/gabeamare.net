@@ -1,0 +1,98 @@
+.grid {
+  grid-area: activity;
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border-bottom: var(--frame-rule) solid #fff;
+  background: var(--electric-blue);
+  contain: layout paint;
+}
+
+.card {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-width: 0;
+  min-height: 0;
+  padding: clamp(0.55rem, 1vw, 1rem);
+  overflow: hidden;
+  background: var(--electric-blue);
+  color: #fff;
+  font-family: var(--font-neue);
+  contain: layout paint;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  margin: 0 0 clamp(0.35rem, 0.65vw, 0.65rem);
+}
+
+.header h2 {
+  margin: 0;
+  font-family: var(--font-neue);
+  font-size: clamp(0.75rem, 1.25vw, 1.2rem);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 0.9;
+}
+
+.header a,
+.period {
+  color: #fff;
+  font-family: var(--font-neue);
+}
+
+.period {
+  flex: 0 1 auto;
+  max-width: 8.5rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: clamp(0.5rem, 0.7vw, 0.7rem);
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 1;
+  text-align: right;
+  cursor: pointer;
+}
+
+.shaderLink {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  place-items: center;
+  background: var(--electric-blue);
+  contain: size layout paint;
+  container-type: size;
+}
+
+.shader {
+  display: block;
+  width: min(100cqw, 100cqh);
+  height: min(100cqw, 100cqh);
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: 1;
+  background: var(--electric-blue);
+}
+
+@media (max-width: 48rem) {
+  .grid {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    aspect-ratio: 2 / 1;
+  }
+
+  .header h2 {
+    font-size: clamp(0.7rem, 3vw, 1rem);
+  }
+}
