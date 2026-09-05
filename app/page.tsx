@@ -46,7 +46,7 @@ export default async function Home() {
 
   return (
     <main className={styles.page}>
-      <ResidueLoader variant="legendre" primeOverride={57} minimal />
+      <ResidueLoader variant="legendre" primeOverride={59} minimal />
 
       <section className={styles.frame} aria-labelledby="site-title">
         <NamePanel />
