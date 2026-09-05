@@ -47,10 +47,10 @@
   height: 100%;
   margin: 0;
   font-family: var(--font-neue);
-  font-size: clamp(4rem, min(28cqw, 60cqh), 19rem);
+  font-size: clamp(4rem, min(29cqw, 66cqh), 20rem);
   font-weight: 800;
   letter-spacing: 0.01em;
-  line-height: 0.78;
+  line-height: 0.7;
 }
 
 .nameLine {
@@ -68,7 +68,7 @@
 .domainLine {
   width: 100%;
   max-width: 100%;
-  gap: clamp(0.4rem, 0.8vw, 0.8rem);
+  gap: clamp(0.2rem, 0.6vw, 0.6rem);
 }
 
 .domain {
@@ -76,7 +76,7 @@
   align-self: flex-end;
   margin: 0 0 0.45em;
   font-family: var(--font-neue);
-  font-size: clamp(0.7rem, 2cqw, 1.2rem);
+  font-size: clamp(0.625rem, 2cqw, 1.2rem);
   font-weight: 600;
   letter-spacing: 0.025em;
   line-height: 1;
@@ -204,8 +204,8 @@
   }
 
   .name {
-    font-size: clamp(4rem, min(26cqw, 60cqh), 12rem);
-    line-height: 0.8;
+    font-size: clamp(4rem, min(27cqw, 66cqh), 12rem);
+    line-height: 0.72;
   }
 
   .about {
